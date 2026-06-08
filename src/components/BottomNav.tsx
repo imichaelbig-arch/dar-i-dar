@@ -1,9 +1,9 @@
 import { Link } from "@tanstack/react-router";
-import { Flower2, CircleDollarSign, User } from "lucide-react";
+import { Flower2, Archive, User } from "lucide-react";
 
 const tabs = [
   { to: "/", label: "Цветы", Icon: Flower2 },
-  { to: "/sell", label: "Продать", Icon: CircleDollarSign },
+  { to: "/sell", label: "Продать", Icon: Archive },
   { to: "/account", label: "Мой аккаунт", Icon: User },
 ] as const;
 
