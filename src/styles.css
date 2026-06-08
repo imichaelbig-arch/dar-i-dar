@@ -91,3 +91,8 @@
   border-radius: 1.25rem;
   box-shadow: 0 4px 18px -10px color-mix(in oklab, var(--color-grad-from) 25%, transparent);
 }
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
