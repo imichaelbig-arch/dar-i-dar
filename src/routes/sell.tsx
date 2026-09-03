@@ -17,7 +17,7 @@ export const Route = createFileRoute("/sell")({
 
 const CITIES = ["Москва", "Санкт-Петербург", "Казань", "Новосибирск", "Екатеринбург"];
 const SIZES = ["Огромный", "Большой", "Средний"];
-const FRESHNESS = ["Свежайшие", "Отличная", "Хорошая"];
+const FRESHNESS = ["Свежие поставки", "Отличная", "Хорошая"];
 
 function SellPage() {
   const navigate = useNavigate();
