@@ -236,6 +236,18 @@ function BouquetCard({ bouquet, onBuy }: { bouquet: Bouquet; onBuy: () => void }
           <span className="text-muted-foreground">Цена: </span>
           <span className="font-semibold">{bouquet.price.toLocaleString("ru-RU")} руб.</span>
         </p>
+        {published && (
+          <time dateTime={bouquet.created_at} className="block space-y-0.5 pt-1">
+            <span className="block">
+              <span className="text-muted-foreground">Дата: </span>
+              <span className="font-medium">{published.date}</span>
+            </span>
+            <span className="block">
+              <span className="text-muted-foreground">Время: </span>
+              <span className="font-medium">{published.time}</span>
+            </span>
+          </time>
+        )}
       </div>
       <div className="p-3 pt-2">
         <button
