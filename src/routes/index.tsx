@@ -4,6 +4,7 @@ import { ChevronDown, MessageCircle, ShoppingCart, User } from "lucide-react";
 import { AppShell } from "@/components/AppShell";
 import { supabase } from "@/integrations/supabase/client";
 import { resolveBouquetImage } from "@/lib/bouquet-images";
+import { formatPublished } from "@/lib/format-date";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,6 +24,7 @@ type Bouquet = {
   price: number;
   city: string;
   status: string;
+  created_at: string;
 };
 
 const CITIES = ["Москва", "Санкт-Петербург", "Казань", "Новосибирск", "Екатеринбург"];
@@ -208,6 +210,7 @@ function FeedPage() {
 }
 
 function BouquetCard({ bouquet, onBuy }: { bouquet: Bouquet; onBuy: () => void }) {
+  const published = formatPublished(bouquet.created_at);
   return (
     <article className="soft-card overflow-hidden">
       <div className="aspect-square overflow-hidden bg-[color:var(--color-pink-soft)]">
